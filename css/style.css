@@ -17,7 +17,14 @@ body{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 }
-
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}
 .container{
 	width: 90%;
 	max-width: 1060px;
@@ -36,6 +43,12 @@ body{
 	text-decoration: none;
 	color: #fff;
 	margin-right: 15px;
+	padding-bottom: 4px;
+	transition: all 0.2s ease;
+}
+.nav__link:hover{
+	color: #FB641A;
+	border-bottom: 2px solid #FB641A;
 }
 .hero__subtitle{
 	display: block;
@@ -83,6 +96,7 @@ body{
 	position: relative;
 	text-decoration: none;
 	display: inline-block;
+
 }
 .button-play:after{
 	content: '';
@@ -97,6 +111,8 @@ body{
 	right: 0;
 	top: 0;
 	border-radius: 50%;
+	animation: radial-pulse 3s;
+	animation-iteration-count: infinite;
 }
 .episodes{
 	padding: 60px 0;
